@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отладчик JavaScript</title>
+</head>
+<body>
+    <script>
+        var number1 = prompt('Введите первое число');
+        var number2 = prompt("Введите второе число");
+        number1 = parseFloat(number1);
+        number2 = parseFloat(number2);
+
+        var to_do = prompt('Введите выражение [-,+,/,*]');
+
+        var answer = 0;
+
+        if (to_do == "+"){
+            answer = number1 + number2;
+            window.alert("ответ = " + answer);
+        }
+        else if (to_do == "*"){
+            answer = number1 * number2;
+            window.alert("ответ = " + answer);
+        }
+        else if (to_do == "/"){
+            answer = number1 / number2;
+            window.alert("ответ = " + answer);
+        }
+        else if (to_do == "-"){
+            answer = number1 - number2;
+            window.alert("ответ = " + answer);
+        }
+        else{
+            window.alert('Ошибка программы');
+        }
+    </script>
+</body>
+</html>
