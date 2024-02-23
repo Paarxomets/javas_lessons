@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Админка магазина одежды</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Админка магазина одежды</h1>
+    
+    <form id="login-form">
+        <h2>Вход в систему</h2>
+        <input type= "text" placeholder="Введите логин" id="login-input">
+        <input type= "password" placeholder="Введите пароль" id="password-input">
+        <button type="button" onclick="login()">Войти</button>
+    </form>
+    
+    <div id="admin-panel" style="display: none;">
+        <h2>Панель администратора</h2>
+        <button onclick="loadTextEditor()">Редактировать текст</button>
+        <button onclick="loadPhotoUploader()">Загрузить фото</button>
+        <button onclick="logout()">Выйти</button>
+    </div>
+
+    <div id="editor" style="display: none;">
+        <h2>Редактор текста</h2>
+        <textarea id="text-editor"></textarea>
+        <button onclick="saveText()">Сохранить</button>
+        <button onclick="cancelEditing()">Отмена</button>
+    </div>
+
+    <div id="uploader" style="display: none;">
+        <h2>Загрузчик фото</h2>
+        <input type="file" id="photo-input">
+        <button onclick="uploadPhoto()">Загрузить</button>
+        <button onclick="cancelUploading()">Отмена</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
